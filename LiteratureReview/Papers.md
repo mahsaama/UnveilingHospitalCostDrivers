@@ -62,16 +62,24 @@ within LLMs, as well as extending its reasoning abilities.
 
 [Autonomous Artificial Intelligence Agents for Clinical Decision Making in Oncology](https://www.semanticscholar.org/paper/Autonomous-Artificial-Intelligence-Agents-for-in-Ferber-Nahhas/3bf118f2f918ad121aa3983479241d8b09f9c071)
 ---
+We introduce an alternative approach to multimodal medical AI that utilizes the generalist capabilities of a large language model (LLM) as a central reasoning engine. This engine autonomously coordinates and deploys a set of specialized medical AI tools. These tools include text, radiology and histopathology image interpretation, genomic data processing, web searches, and document retrieval from medical guidelines.
+We validate our system across a series of clinical oncology scenarios that closely resemble typical patient care workflows. We show that the system has a high capability in employing appropriate tools (97%), drawing correct conclusions (93.6%), and providing complete (94%), and helpful (89.2%) recommendations for individual patient cases while consistently referencing relevant literature
+(82.5%) upon instruction.
+This work enables LLMs to function as specialist, patient-tailored clinical assistants. It also simplifies regulatory compliance by allowing each component tool to be individually validated and approved. We believe, that our work
+can serve as a proof-of-concept for more advanced LLM-agents in the medical domain.
+(They use GPT4 as their LLM)
 
-[A survey on agents applications in healthcare: Opportunities, challenges and trends](https://www.semanticscholar.org/paper/A-survey-on-agents-applications-in-healthcare%3A-and-Sulis-Mariani/4844154af223bb51189e30dbb411cf2a7e84c03b)
+
+[Learning to Be A Doctor: Searching for Effective Medical Agent Architectures](https://www.semanticscholar.org/paper/Learning-to-Be-A-Doctor%3A-Searching-for-Effective-Zhuang-Jiang/2602c2a05765006ac21ac3ac795a88cc607f3ae3)
 ---
-
-
-[https://www.semanticscholar.org/paper/A-survey-on-agents-applications-in-healthcare%3A-and-Sulis-Mariani/4844154af223bb51189e30dbb411cf2a7e84c03b](https://www.semanticscholar.org/paper/Learning-to-Be-A-Doctor%3A-Searching-for-Effective-Zhuang-Jiang/2602c2a05765006ac21ac3ac795a88cc607f3ae3)
----
-
+Existing medical agent systems often rely on static, manually crafted workflows that lack the flexibility to accommodate diverse diagnostic requirements and adapt to emerging clinical scenarios. Motivated by the success of automated machine learning (AutoML), this paper introduces a novel framework for the automated
+design of medical agent architectures. Specifically, we define a hierarchical and expressive agent search space that enables dynamic workflow adaptation through structured modifications at the node, structural, and framework
+levels. Our framework conceptualizes medical agents as graph-based architectures composed of diverse, functional node types and supports iterative self-improvement guided by diagnostic feedback. Experimental results on skin disease diagnosis tasks demonstrate that the proposed method effectively evolves workflow structures and significantly enhances diagnostic accuracy over time. 
 
 [Evaluating large language models as agents in the clinic](https://www.semanticscholar.org/paper/Evaluating-large-language-models-as-agents-in-the-Mehandru-Miao/1700ce7976bb88e90796c96c344331282ecf9208)
 ---
-
-
+These LLMs are not just capable of modeling language, but can also act as intelligent agents that interact with stakeholders in openended conversations and even influence clinical decision-making. Rather than relying on
+benchmarks that measure a model’s ability to process clinical data or answer standardized test questions, LLM agents can be modeled in highfidelity simulations of clinical settings and should be assessed for their impact on clinical workflows.
+These evaluation frameworks, which we refer to as “Artificial Intelligence Structured Clinical Examinations” (“AI-SCE”), can draw from comparable technologies where machines operate with varying degrees of self-governance, such as self-driving cars, in dynamic environments with multiple stakeholders. Developing these robust, real-world clinical evaluations will be crucial
+towards deploying LLM agents in medical settings.
+(Not much helpful)
