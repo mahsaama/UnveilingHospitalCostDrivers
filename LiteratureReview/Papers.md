@@ -1,5 +1,7 @@
 # Papers
 
+## Explainable AI for medical cost prediction
+
 [Machine Learning For An Explainable Cost Prediction of Medical Insurance](https://api.semanticscholar.org/CorpusId:265443763) 
 ---
 Predictive modeling in healthcare continues to be an active actuarial research topic as more insurance companies aim to maximize the potential of **Machine Learning (ML)** approaches to increase their productivity and efficiency. They use:
@@ -46,3 +48,30 @@ smaller-scale anomalous factors missed by the experts; 3) early
 identification of emerging factors before all claims have been
 processed; and 4) an efficient automated process that can save
 months of manual effort.
+
+
+## Agentic AI in healthcare
+
+[MedAgents: Large Language Models as Collaborators for Zero-shot Medical Reasoning](https://www.semanticscholar.org/paper/MedAgents%3A-Large-Language-Models-as-Collaborators-Tang-Zou/44d16a076c00ecada3d425203377e4ec951c4ed0)
+---
+Healthcare field faces unique challenges such as domain-specific
+terminologies and reasoning over specialized knowledge. To address these issues, we propose MEDAGENTS, a novel multi-disciplinary collaboration framework for the medical domain. MedAgents leverages LLM-based agents in a role-playing setting that participate in a collaborative multi-round discussion, thereby enhancing LLM proficiency and reasoning capabilities. This **training-free** framework encompasses *five critical steps*: gathering domain experts, proposing individual
+analyses, summarising these analyses into a report, iterating over discussions until a consensus is reached, and ultimately making a decision. Our proposed MEDAGENTS framework excels at mining and harnessing the medical expertise
+within LLMs, as well as extending its reasoning abilities.
+
+
+[Autonomous Artificial Intelligence Agents for Clinical Decision Making in Oncology](https://www.semanticscholar.org/paper/Autonomous-Artificial-Intelligence-Agents-for-in-Ferber-Nahhas/3bf118f2f918ad121aa3983479241d8b09f9c071)
+---
+
+[A survey on agents applications in healthcare: Opportunities, challenges and trends](https://www.semanticscholar.org/paper/A-survey-on-agents-applications-in-healthcare%3A-and-Sulis-Mariani/4844154af223bb51189e30dbb411cf2a7e84c03b)
+---
+
+
+[https://www.semanticscholar.org/paper/A-survey-on-agents-applications-in-healthcare%3A-and-Sulis-Mariani/4844154af223bb51189e30dbb411cf2a7e84c03b](https://www.semanticscholar.org/paper/Learning-to-Be-A-Doctor%3A-Searching-for-Effective-Zhuang-Jiang/2602c2a05765006ac21ac3ac795a88cc607f3ae3)
+---
+
+
+[Evaluating large language models as agents in the clinic](https://www.semanticscholar.org/paper/Evaluating-large-language-models-as-agents-in-the-Mehandru-Miao/1700ce7976bb88e90796c96c344331282ecf9208)
+---
+
+
