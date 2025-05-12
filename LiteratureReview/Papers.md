@@ -83,3 +83,12 @@ benchmarks that measure a model’s ability to process clinical data or answer s
 These evaluation frameworks, which we refer to as “Artificial Intelligence Structured Clinical Examinations” (“AI-SCE”), can draw from comparable technologies where machines operate with varying degrees of self-governance, such as self-driving cars, in dynamic environments with multiple stakeholders. Developing these robust, real-world clinical evaluations will be crucial
 towards deploying LLM agents in medical settings.
 (Not much helpful)
+
+## Papers Using the SPARCS Dataset
+
+[Predicting hospital length of stay using machine learning on a large open health dataset](https://pubmed.ncbi.nlm.nih.gov/39075382/)
+---
+
+Length of stay has a strong correlation with total costs. This paper claims to be one of the first to utilize the entire dataset in predicting the LoS, since previous work focused on a subset of diagnosis codes. The focus is on classical ML techniques like decision trees and regression, since interpretability and explainability is important in clinical data. They also used SHAP analysis to examine the importance of different features in the dataset.
+
+Could be useful for checking out basic statistical analysis and EDA, but it's not very interesting.
