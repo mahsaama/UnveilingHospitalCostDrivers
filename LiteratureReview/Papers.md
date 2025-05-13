@@ -99,6 +99,21 @@ It consists of the following agents:
 - Low Complexity: Single PCP agent with few-shot prompting.
 - Moderate Complexity: An MDT performs an iterative discussion process with a subset of agents in each round. Stops early if consensus is reached.
 - High Complexity: Multiple teams including an Initial Assessment, diagnostic teams, and a Final Review & Decision team. Each team collaboratively produces a comprehensive report.
+- 
+
+[
+Efficient Predictive interpretable analytics models for Claims Cost Management in Healthcare using CNN-Ant Colony Optimization](https://ijisae.org/index.php/IJISAE/article/view/7414/6401)
+---
+This paper presents a novel hybrid machine learning model combining Generative Adversarial Networks (GANs) and Ant Colony Optimization (ACO) to address the complex task of predicting and optimizing healthcare claims costs.
+
+Methodology:
+GAN Module:
+Used to extract significant features from medical claims data. GAN acts as a feature selector, learning complex patterns.
+
+ACO Module:
+Utilizes the selected features to optimize healthcare resource allocation, minimizing overall costs through a bio-inspired search strategy.
+
+The GAN-ACO hybrid framework is a promising advancement in healthcare cost analytics, providing not only high predictive power but also practical value through interpretability and optimization. It addresses the shortcomings of existing models by delivering actionable, understandable, and cost-effective solutions for healthcare claims management.
 
 ## Papers Using the SPARCS Dataset
 
