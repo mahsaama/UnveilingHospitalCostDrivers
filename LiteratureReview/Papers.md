@@ -92,3 +92,17 @@ towards deploying LLM agents in medical settings.
 Length of stay has a strong correlation with total costs. This paper claims to be one of the first to utilize the entire dataset in predicting the LoS, since previous work focused on a subset of diagnosis codes. The focus is on classical ML techniques like decision trees and regression, since interpretability and explainability is important in clinical data. They also used SHAP analysis to examine the importance of different features in the dataset.
 
 Could be useful for checking out basic statistical analysis and EDA, but it's not very interesting.
+
+## Related Works
+**[Hybrid Data-Driven Approach for Analyzing and Predicting Inpatient Length of Stay](https://arxiv.org/pdf/2501.18535)**
+
+Patient length of stay (LoS) is a critical metric for evaluating the efficacy of hospital management. They presented a framework for the optimization of patient flow. They used a comprehensive dataset of 2.3 million de-identified patient records, they analyzed demographics, diagnoses, treatments, services, costs, and charges with machine learning models (Decision Tree, Logistic Regression, Random Forest, Adaboost, LightGBM) and Python tools (Spark, AWS clusters, dimensionality reduction).
+The model predicts patient length of stay (LoS) upon admission using supervised learning algorithms. The hybrid approach enables the identification of key factors influencing LoS, offering a robust framework for hospitals to streamline patient flow and resource utilization.
+
+**[Building predictive models of healthcare costs with open healthcare data](https://arxiv.org/pdf/2304.02191)**
+
+A short paper containing only 2 pages, accepted and published by IEEE conference (BIBM 2020). 
+Used data from New York State SPARCS.
+
+They presented an approach by developing a predictive model using machine-learning techniques. They analyzed de-identified patient data from New York State SPARCS (statewide planning and research cooperative system), consisting of 2.3 million records in 2016. We built models to predict costs from patient diagnoses and demographics.
+They investigated two model classes consisting of sparse regression and decision trees. They obtained the best performance by using a decision tree with depth 10. We obtained an R2 value of 0.76, which is better than the values reported in the literature for similar problems.
