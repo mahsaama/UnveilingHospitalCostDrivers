@@ -84,6 +84,22 @@ These evaluation frameworks, which we refer to as “Artificial Intelligence Str
 towards deploying LLM agents in medical settings.
 (Not much helpful)
 
+[MDAgents: An Adaptive Collaboration of LLMs for
+Medical Decision-Making (NeurIPS 2024)](https://github.com/mitmedialab/MDAgents)
+---
+
+Takes ideas from how medical decisions are made in practice and emulates hierarchical diagnosis procedures. "Dynamically assigns the optimal collaboration strategy at inference time, based on the complexity of the query.
+
+It consists of the following agents:
+
+1. Moderator: Functions as a GP and assesses the complexity of the problem. Oversees the decision-making process.
+2. Recruiter: Assembles a team of specialists based on the complexity. May assign a single PCP agent (Primary Care Clinician, low complexity) or form a MDT (Multi-disciplinary Team, moderate complexity) or ICT (Integrated Care Team, high complexity) with relevant expertise.
+3. Doctor/Specialist: Domain specific (complex scenarios) or general physicians (routine cases). Engage in collaborate decision making.
+
+- Low Complexity: Single PCP agent with few-shot prompting.
+- Moderate Complexity: An MDT performs an iterative discussion process with a subset of agents in each round. Stops early if consensus is reached.
+- High Complexity: Multiple teams including an Initial Assessment, diagnostic teams, and a Final Review & Decision team. Each team collaboratively produces a comprehensive report.
+
 ## Papers Using the SPARCS Dataset
 
 [Predicting hospital length of stay using machine learning on a large open health dataset](https://pubmed.ncbi.nlm.nih.gov/39075382/)
