@@ -1,0 +1,6 @@
+pandas
+xgboost
+shap
+requests
+openai
+matplotlib
