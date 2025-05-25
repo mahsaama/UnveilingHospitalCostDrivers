@@ -2,7 +2,7 @@ pandas
 xgboost
 shap
 requests
-# openai
+openai
 matplotlib
 langchain
 langchain-community
