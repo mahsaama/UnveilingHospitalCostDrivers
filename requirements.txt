@@ -7,3 +7,6 @@ matplotlib
 langchain
 langchain-community
 langchain-core
+streamlit
+langchain-google-genai
+google-genai
