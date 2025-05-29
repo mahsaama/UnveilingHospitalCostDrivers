@@ -1,0 +1,305 @@
+{
+    "Hospital Service Area": {
+        "type": "str",
+        "definition": "A description of the Health Service Area (HSA) in which the hospital is located.",
+        "options": ["Capital/Adirondack", "Central NY", "Finger Lakes", "Hudson Valley", "Long Island", "New York City", "Southern Tier", "Western NY"],
+        "default": "Unknown"
+    },
+    "Hospital County": {
+        "type": "str",
+        "definition": "A description of the county in which the hospital is located.",
+        "options": [
+            "Albany",
+            "Allegany",
+            "Bronx",
+            "Broome",
+            "Cattaraugus",
+            "Cayuga",
+            "Chautauqua",
+            "Chemung",
+            "Chenango",
+            "Clinton",
+            "Columbia",
+            "Cortland",
+            "Delaware",
+            "Dutchess",
+            "Erie",
+            "Essex",
+            "Franklin",
+            "Fulton",
+            "Genesee",
+            "Herkimer",
+            "Jefferson",
+            "Kings",
+            "Lewis",
+            "Livingston",
+            "Madison",
+            "Manhattan",
+            "Monroe",
+            "Montgomery",
+            "Nassau",
+            "Niagara",
+            "Oneida",
+            "Onondaga",
+            "Ontario",
+            "Orange",
+            "Orleans",
+            "Oswego",
+            "Otsego",
+            "Putnam",
+            "Queens",
+            "Rensselaer",
+            "Richmond",
+            "Rockland",
+            "Saratoga",
+            "Schenectady",
+            "Schoharie",
+            "Schuyler",
+            "St Lawrence",
+            "Steuben",
+            "Suffolk",
+            "Sullivan",
+            "Tompkins",
+            "Ulster",
+            "Warren",
+            "Washington",
+            "Wayne",
+            "Westchester",
+            "Wyoming",
+            "Yates"
+        ],
+        "default": "Unknown"
+    },
+    "Operating Certificate Number": {
+        "type": "int64",
+        "definition": "The facility Operating Certificate Number assigned by NYS Department of Health."
+    },
+    "Permanent Facility Id": {
+        "type": "int64",
+        "definition": "Permanent Facility Identifier."
+    },
+    "Facility Name": {
+        "type": "str",
+        "definition": "The name of the facility where services were performed based on the Permanent Facility Identifier (PFI), as maintained by the NYSDOH Division of Health Facility Planning.",
+        "default": "Redacted for Confidentiality"
+    },
+    "Age Group": {
+        "type": "str",
+        "definition": "Age in years at time of admission/visit.",
+        "options": ["0 to 17", "18 to 29", "30 to 49", "50 to 69", "70 or Older"]
+    },
+    "Zip Code - 3 digits": {
+        "type": "int64",
+        "definition": "The first three digits of the patient zip code."
+    },
+    "Gender": {
+        "type": "str",
+        "definition": "Patient gender: (M) Male, (F) Female, (U) Unknown.",
+        "options": ["M", "F", "U"],
+        "default": "U"
+    },
+    "Race": {
+        "type": "str",
+        "definition": "Patient race.",
+        "options": ["White", "Black/African American", "Multi-racial", "Other Race"],
+        "default": "Other Race"
+    },
+    "Ethnicity": {
+        "type": "str",
+        "definition": "Patient ethnicity.",
+        "options": ["Unknown", "Spanish/Hispanic", "Not Span/Hispanic", "Multi-ethnic"],
+        "default": "Unknown"
+    },
+    "Length of Stay": {
+        "type": "int64",
+        "definition": "The total number of patient days at an acute level and/or other than acute care level (excluding leave of absence days) (Discharge Date - Admission Date) + 1."
+    },
+    "Type of Admission": {
+        "type": "str",
+        "definition": "A description of the manner in which the patient was admitted to the health care facility: Elective, Emergency, Newborn, Not Available, Trauma, Urgent.",
+        "options": ["Not Available", "Elective", "Emergency", "Newborn", "Trauma", "Urgent"],
+        "default": "Not Available"
+    },
+    "Patient Disposition": {
+        "type": "str",
+        "definition": "The patients destination or status upon discharge.",
+        "options": [
+            "Home or Self Care",
+            "Short-term Hospital",
+            "Left Against Medical Advice",
+            "Home w/ Home Health Services",
+            "Expired",
+            "Medicaid Cert Nursing Facility",
+            "Skilled Nursing Home",
+            "Psychiatric Hospital or Unit of Hosp",
+            "Inpatient Rehabilitation Facility",
+            "Hospice - Home",
+            "Facility w/ Custodial/Supportive Care",
+            "Hospice - Medical Facility",
+            "Medicare Cert Long Term Care Hospital",
+            "Cancer Center or Childrens Hospital",
+            "Court/Law Enforcement",
+            "Federal Health Care Facility",
+            "Critical Access Hospital",
+            "Hosp Basd Medicare Approved Swing Bed",
+            "Another Type Not Listed"
+        ],
+        "default": "Another Type Not Listed"
+
+    },
+    "Discharge Year": {
+        "type": "int64",
+        "definition": "The year (CCYY) of discharge."
+    },
+    "CCSR Diagnosis Code": {
+        "type": "str",
+        "definition": "AHRQ Clinical Classification Software Refined (CCSR) Diagnosis Category Code."
+    },
+    "CCSR Diagnosis Description": {
+        "type": "str",
+        "definition": "AHRQ Clinical Classification Software Refined (CCSR) Diagnosis Category Description."
+    },
+    "CCSR Procedure Code": {
+        "type": "str",
+        "definition": "AHRQ Clinical Classification Software Refined (CCSR) ICD-10 Procedure Category Code."
+    },
+    "CCSR Procedure Description": {
+        "type": "str",
+        "definition": "AHRQ Clinical Classification Software Refined (CCSR) ICD-10 Procedure Category Description."
+    },
+    "APR DRG Code": {
+        "type": "int64",
+        "definition": "The All Patients Refined Diagnosis Related Groups (APR-DRG) Classification Code."
+    },
+    "APR DRG Description": {
+        "type": "str",
+        "definition": "The APR-DRG Classification Code Description."
+    },
+    "APR MDC Code": {
+        "type": "int64",
+        "definition": "All Patient Refined Major Diagnostic Category (APR MDC) Code."
+    },
+    "APR MDC Description": {
+        "type": "str",
+        "definition": "All Patient Refined Major Diagnostic Category (APR MDC) Description.",
+        "options": [
+            "DISEASES AND DISORDERS OF THE RESPIRATORY SYSTEM",
+            "DISEASES AND DISORDERS OF THE SKIN, SUBCUTANEOUS TISSUE AND BREAST",
+            "PREGNANCY, CHILDBIRTH AND THE PUERPERIUM",
+            "MENTAL DISEASES AND DISORDERS",
+            "DISEASES AND DISORDERS OF THE EYE",
+            "DISEASES AND DISORDERS OF THE KIDNEY AND URINARY TRACT",
+            "DISEASES AND DISORDERS OF THE DIGESTIVE SYSTEM",
+            "DISEASES AND DISORDERS OF THE NERVOUS SYSTEM",
+            "DISEASES AND DISORDERS OF THE CIRCULATORY SYSTEM",
+            "ALCOHOL/DRUG USE AND ALCOHOL/DRUG INDUCED ORGANIC MENTAL DISORDERS",
+            "DISEASES AND DISORDERS OF THE HEPATOBILIARY SYSTEM AND PANCREAS",
+            "INFECTIOUS AND PARASITIC DISEASES (SYSTEMIC OR UNSPECIFIED SITES)",
+            "NEWBORNS AND OTHER NEONATES WITH CONDITIONS ORIGINATING IN THE PERINATAL PERIOD",
+            "DISEASES AND DISORDERS OF THE MUSCULOSKELETAL SYSTEM AND CONNECTIVE TISSUE",
+            "DISEASES AND DISORDERS OF THE BLOOD AND BLOOD FORMING ORGANS AND IMMUNOLOGICAL DISORDERS",
+            "ENDOCRINE, NUTRITIONAL AND METABOLIC DISEASES AND DISORDERS",
+            "DISEASES AND DISORDERS OF THE EAR, NOSE, MOUTH AND THROAT",
+            "MULTIPLE SIGNIFICANT TRAUMA",
+            "MYELOPROLIFERATIVE DISEASES AND DISORDERS, AND POORLY DIFFERENTIATED NEOPLASM",
+            "HUMAN IMMUNODEFICIENCY VIRUS INFECTIONS",
+            "DISEASES AND DISORDERS OF THE MALE REPRODUCTIVE SYSTEM",
+            "INJURIES, POISONINGS AND TOXIC EFFECTS OF DRUGS",
+            "DISEASES AND DISORDERS OF THE FEMALE REPRODUCTIVE SYSTEM",
+            "FACTORS INFLUENCING HEALTH STATUS AND OTHER CONTACTS WITH HEALTH SERVICES",
+            "BURNS",
+            "PRE MDC"
+        ]
+    },
+    "APR Severity of Illness Code": {
+        "type": "str",
+        "definition": "The APR-DRG Severity of Illness Code: 0, 1, 2, 3, 4",
+        "options": ["0", "1", "2", "3", "4"]
+    },
+    "APR Severity of Illness Description": {
+        "type": "str",
+        "definition": "All Patient Refined Severity of Illness (APR SOI) Description: Undetermined (0), Minor (1), Moderate (2), Major (3), Extreme (4).",
+        "options": ["Unknown", "Minor", "Moderate", "Major", "Extreme"],
+        "default": "Unknown"
+    },
+    "APR Risk of Mortality": {
+        "type": "str",
+        "definition": "All Patient Refined Risk of Mortality (APR ROM) Description: Undetermined (0), Minor (1), Moderate (2), Major (3), Extreme (4).",
+        "options": ["Unknown", "Minor", "Moderate", "Major", "Extreme"],
+        "default": "Unknown"
+    },
+    "APR Medical Surgical Description": {
+        "type": "str",
+        "definition": "The APR-DRG specific classification of Medical, Surgical or Not Applicable.",
+        "options": ["Not Applicable", "Medical", "Surgical"],
+        "default": "Not Applicable"
+    },
+    "Payment Typology 1": {
+        "type": "str",
+        "definition": "A description of the type of payment for this occurrence.",
+        "options": [
+            "Unknown",
+            "Medicaid",
+            "Private Health Insurance",
+            "Blue Cross/Blue Shield",
+            "Medicare",
+            "Self-Pay",
+            "Federal/State/Local/VA",
+            "Miscellaneous/Other",
+            "Managed Care, Unspecified",
+            "Department of Corrections"
+        ],
+        "default": "Unknown"
+    },
+    "Payment Typology 2": {
+        "type": "str",
+        "definition": "A description of the type of payment for this occurrence.",
+        "options": [
+            "Unknown",
+            "Medicaid",
+            "Private Health Insurance",
+            "Blue Cross/Blue Shield",
+            "Medicare",
+            "Self-Pay",
+            "Federal/State/Local/VA",
+            "Miscellaneous/Other",
+            "Managed Care, Unspecified",
+            "Department of Corrections"
+        ],
+        "default": "Unknown"
+    },
+    "Payment Typology 3": {
+        "type": "str",
+        "definition": "A description of the type of payment for this occurrence.",
+        "options": [
+            "Unknown",
+            "Medicaid",
+            "Self-Pay",
+            "Blue Cross/Blue Shield",
+            "Private Health Insurance",
+            "Medicare",
+            "Federal/State/Local/VA",
+            "Managed Care, Unspecified",
+            "Miscellaneous/Other",
+            "Department of Corrections"
+        ],
+        "default": "Unknown"
+    },
+    "Birth Weight": {
+        "type": "int64",
+        "definition": "The neonate birth weight in grams; rounded to nearest 100 g."
+    },
+    "Emergency Department Indicator": {
+        "type": "str",
+        "definition": "The Emergency Department Indicator is set based on the submitted revenue codes. If the record contained an Emergency Department revenue code of 045X, the indicator is set to Y, otherwise it will be N.",
+        "options": ["Y", "N"]
+    },
+    "Total Charges": {
+        "type": "float64",
+        "definition": "Total charges for the discharge."
+    },
+    "Total Costs": {
+        "type": "float64",
+        "definition": "Total estimated cost for the discharge."
+    }
+}

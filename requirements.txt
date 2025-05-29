@@ -1,5 +1,6 @@
 pandas
 xgboost
+lightgbm
 shap
 requests
 openai

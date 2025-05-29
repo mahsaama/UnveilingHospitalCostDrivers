@@ -2,56 +2,66 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import xgboost as xgb
 import shap
-from sklearn.model_selection import train_test_split
-from sklearn.externals import joblib
+import joblib
+import json
 
 
-
-def load_and_preprocess_data():
+def load_data():
     # Load data
-    data = pd.read_csv('data/Hospital_Inpatient_Discharges__SPARCS_De-Identified___2022_20250423.csv')
+    data = pd.read_csv(
+        "data/Hospital_Inpatient_Discharges__SPARCS_De-Identified___2022_20250423.csv"
+    )
+    with open("data/data_info.json", "r") as f:
+        data_info = json.load(f)
 
-    # Remove commas and convert to numeric
-    for col in ["Length of Stay", "Birth Weight", "Total Charges", "Total Costs"]:
-        data[col] = pd.to_numeric(data[col].str.replace(',', '', regex=False), errors='coerce')
+    # Handle missing data and changing column type
+    for col_name, info in data_info.items():
+        # print(col_name)
+        if info["type"] == "int64":
+            if col_name == "Zip Code - 3 digits":
+                data[col_name] = data[col_name].replace("OOS", 000)
+                data[col_name] = data[col_name].fillna(000)
+            if col_name == "Length of Stay":
+                data[col_name] = data[col_name].replace("120 +", 121)
+            if col_name == "Birth Weight":
+                data[col_name] = data[col_name].replace("UNKN", -1)
+                data[col_name] = data[col_name].fillna(-1)
+            else:
+                data[col_name] = data[col_name].fillna(-1)
 
-    # Handle missing numeric data
-    for col in data.columns:
-        if data[col].dtype != "object":
-            data[col] = data[col].fillna(data[col].median())
+            data[col_name] = pd.to_numeric(data[col_name]).astype("int")
 
-    # Identify categorical columns 
-    categorical_columns = []
+        elif info["type"] == "str":
+            data[col_name] = data[col_name].fillna("Unknown")
+            data[col_name] = data[col_name].astype(str)
+
+        elif info["type"] == "float64":
+            data[col_name] = data[col_name].str.replace(",", "")
+            data[col_name] = pd.to_numeric(data[col_name]).astype("float")
+
+    # Identify categorical columns and convert them to categories
     for col in data.columns:
         if data[col].dtype == "object":
-            categorical_columns.append(col)
+            data[col] = data[col].astype("category")
 
-    # removing special characters from column names
-    new_columns = []
-    for col in data.columns:
-        if "[" in col or "]" in col:
-            new_columns.append(col.replace('[', '').replace("]", ""))
-        elif "<" in col:
-            new_columns.append(col.replace("<", "less than"))
-        else:
-            new_columns.append(col)
-    data.columns = new_columns
+    return data, data_info
 
-    # Encode categorical columns
-    data_encoded = pd.get_dummies(data, columns=categorical_columns, drop_first=True)
-
-    return data, data_encoded
 
 def load_xgb_model():
-    # model = joblib.load("models/xgb_model.pkl")
-    model = joblib.load("model.json")
+    model = joblib.load("models/xgb_model_v2.pkl")
     return model
 
+
 def load_lgb_model():
-    model = joblib.load("models/lgb_model.pkl")
+    model = joblib.load("models/lgb_model_v2.pkl")
     return model
+
+
+def load_shap_explainer():
+    explainer = joblib.load("models/shap_explainer.pkl")
+    return explainer
+
 
 def predict_data(model, input):
     y_pred = model.predict(input)
@@ -59,52 +69,59 @@ def predict_data(model, input):
 
 
 if __name__ == "__main__":
-    data, data_encoded = load_and_preprocess_data()
-    
+    data, data_info = load_data()
+
     # Section 1: Input patient info
     st.sidebar.header("Patient Info")
 
     # Dictionary to collect new values
-    new_patient = {}
+    sample_patient_dict = {}
 
     # Generate input widgets dynamically
     for col in data.columns:
-        dtype = data[col].dtype
         if col != "Total Costs":
-            if pd.api.types.is_numeric_dtype(data[col]):
-                min_val = int(data[col].min())
-                max_val = int(data[col].max())
-                if min_val == max_val:
-                    max_val += 1
-                default_val = int(data[col].mean())
-                new_patient[col] = st.sidebar.slider(f"{col}", min_val, max_val, default_val)
-
-            elif pd.api.types.is_float_dtype(dtype):
-                default_val = float(data[col].mean())
-                new_patient[col] = st.number_input(f"{col}", value=default_val)
-
-            elif pd.api.types.is_bool_dtype(data[col]):
-                new_patient[col] = st.sidebar.checkbox(f"{col}", value=bool(data[col].iloc[0]))
-
-            elif pd.api.types.is_categorical_dtype(data[col]) or data[col].nunique() < 10:
-                options = data[col].unique().tolist()
-                new_patient[col] = st.sidebar.selectbox(f"{col}", options)
+            if "options" in data_info[col]:
+                sample_patient_dict[col] = st.sidebar.selectbox(
+                    f"{col}",
+                    data_info[col]["options"],
+                    help=data_info[col]["definition"],
+                )
 
             else:
-                new_patient[col] = st.sidebar.text_input(f"{col}", value=str(data[col].iloc[0]))
 
+                if data_info[col]["type"] == "int64" or data_info[col]["type"] == "float64":
+                    sample_patient_dict[col] = st.sidebar.number_input(
+                        f"{col}",
+                        help=data_info[col]["definition"],
+                        format="%.0f"
+                    )
+
+                elif data_info[col]["type"] == "str":
+                    sample_patient_dict[col] = st.sidebar.text_input(
+                        f"{col}",
+                        value=(
+                            data_info[col]["default"]
+                            if "default" in data_info[col]
+                            else "Unknown"
+                        ),
+                        placeholder=(
+                            data_info[col]["default"]
+                            if "default" in data_info[col]
+                            else "Unknown"
+                        ),
+                        help=data_info[col]["definition"],
+                    )
+
+    sample_patient_df = pd.DataFrame(sample_patient_dict, index=[0])
+
+    for col in data.select_dtypes(["category"]).columns:
+        sample_patient_df[col] = pd.Categorical(
+            sample_patient_df[col], categories=data[col].cat.categories
+        )
 
     # Section 2: Predict cost
-    xgb_model = load_xgb_model()
-
-    patient_data = pd.DataFrame([new_patient])
-    for col in patient_data.columns:
-        if data[col].dtype != "object":
-            patient_data[col] = pd.to_numeric(patient_data[col], errors='coerce')
-        else:
-            patient_data[col] = patient_data[col].astype("object")
-
-    print(patient_data_encoded.columns)
+    # xgb_model = load_xgb_model()
+    # xgb_model = load_lgb_model()
 
     # if st.sidebar.button("Predict Cost"):
     #     # print(patient_data)
@@ -113,5 +130,3 @@ if __name__ == "__main__":
     # st.subheader("Predicted Inpatient Cost")
     # cost = predict_data(model, patient_data_encoded)
     # st.metric(label="Estimated Cost", value=f"${cost:,.2f}")
-
-
