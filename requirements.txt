@@ -12,3 +12,6 @@ langchain-core
 streamlit
 langchain-google-genai
 google-genai
+scikit-learn
+numpy
+joblib
