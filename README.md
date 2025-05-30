@@ -50,7 +50,7 @@ Data
 
 Workflow
 -------
-<object data="Workflow.pdf" type="application/pdf" width="100%" height="600px"></object>
+![workflow](Workflow.jpeg)
 
 
 Getting Started
