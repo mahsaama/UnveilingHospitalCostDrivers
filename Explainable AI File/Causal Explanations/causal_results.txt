@@ -1,9 +1,0 @@
-=== CAUSAL ANALYSIS RESULTS ===
-
-Causal Estimate (Length of Stay → Total Costs): -189.69915389851667
-
-Refutation Test:
-Refute: Use a Placebo Treatment
-Estimated effect:-189.69915389851667
-New effect:-2.2751682990929112e-05
-p value:0.0

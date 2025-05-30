@@ -2,7 +2,7 @@
 
 Goal
 ------------
- Explainable and Agentic AI Approach for Unveiling Hospital Cost Drivers
+Explainable and Agentic AI Approach for Unveiling Hospital Cost Drivers
 
 Project Description
 -------------
@@ -46,3 +46,34 @@ Data
 - Over 2.3 million inpatient discharge entries
 - Includes patient demographics, diagnoses, procedures, hospital identifiers, length of stay, and total charges
 - De-identified and publicly accessible
+
+
+Workflow
+-------
+<object data="Workflow.pdf" type="application/pdf" width="100%" height="600px"></object>
+
+
+Getting Started
+-----
+1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+2. Run Notebooks
+- **Data Preprocessing**:  
+  `notebooks/preprocessing.ipynb`
+
+- **Model Training**:  
+  `notebooks/model.ipynb`
+
+- **Explainable AI Analysis**:  
+  `notebooks/explainable_AI.ipynb`
+
+- **Agentic AI Simulation**:  
+  `notebooks/agentic_AI.ipynb`
+
+3. Launch the Dashboard
+```bash
+streamlit run src/dashboard.py
+```
