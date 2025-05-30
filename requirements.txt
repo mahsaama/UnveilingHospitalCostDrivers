@@ -1,6 +1,7 @@
 pandas
 xgboost
 lightgbm
+catboost
 shap
 requests
 openai
