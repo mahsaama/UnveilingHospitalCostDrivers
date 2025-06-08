@@ -7,7 +7,9 @@ import joblib
 import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage, SystemMessage
+import os
 
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 SYSTEM_PROMPT = '''
 You are an expert in healthcare cost optimization and hospital operations strategy.
@@ -52,12 +54,11 @@ Data:
 '''
 
 
-# gemini google
+# gemini google, load api_key from https://aistudio.google.com/apikey
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
-    api_key="GEMINI_API_KEY",
+    api_key=gemini_api_key,
 )
-
 
 
 @st.cache_data
