@@ -20,3 +20,4 @@ dice_ml
 tqdm
 torch
 lime
+langchain_experimental
