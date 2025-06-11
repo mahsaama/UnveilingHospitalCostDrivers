@@ -353,7 +353,6 @@
             "Another Type Not Listed"
         ],
         "default": "Another Type Not Listed"
-
     },
     "Discharge Year": {
         "type": "int64",
