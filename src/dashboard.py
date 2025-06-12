@@ -176,14 +176,14 @@ def cost_predition(strategies: dict):
         info = data_info[col]
         if method != None and len(method) > 5:
             if info["type"] == "str" and "options" in info:
-                # print(col, info["options"])
+                print(col, info["options"])
                 for option in info["options"]:
                     updated_patient_dict = shared_memory["patient_dict"].copy()
                     # apply changes
                     updated_patient_dict[col] = option
                     updated_patient_df = pd.DataFrame(updated_patient_dict, index=[0])
-                    for col in data.select_dtypes(['category']).columns:
-                        updated_patient_df[col] = pd.Categorical(updated_patient_df[col], categories=data[col].cat.categories)
+                    for col_n in data.select_dtypes(['category']).columns:
+                        updated_patient_df[col_n] = pd.Categorical(updated_patient_df[col_n], categories=data[col_n].cat.categories)
                     cost = model.predict(updated_patient_df).item()
                     if cost < min_cost:
                         min_cost = cost
@@ -309,7 +309,7 @@ if __name__ == "__main__":
                     print("Success!")
                     print(output)
                     print("-"*100)
-                    print(shared_memory["suggested strategies"])
+                    print(shared_memory)
                     st.success("AI has generated the following proposals:")
                     proposal_df = pd.DataFrame(columns=["Feature", "Proposal"])
                     for k, v in shared_memory["suggested strategies"].items():
