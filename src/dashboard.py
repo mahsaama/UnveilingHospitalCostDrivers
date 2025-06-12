@@ -1,13 +1,19 @@
+from langchain_experimental.plan_and_execute import PlanAndExecute, load_chat_planner, load_agent_executor
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.schema import HumanMessage, SystemMessage
+from langchain.tools import StructuredTool
+from st_aggrid import AgGrid
+from st_aggrid.grid_options_builder import GridOptionsBuilder
+import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
 import shap
 import joblib
 import json
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.schema import HumanMessage, SystemMessage
+import time
 import os
+
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 
@@ -53,6 +59,7 @@ Data:
 ###patient_info###
 '''
 
+shared_memory = {}
 
 # gemini google, load api_key from https://aistudio.google.com/apikey
 llm = ChatGoogleGenerativeAI(
@@ -104,12 +111,12 @@ def load_data():
 
 
 def load_xgb_model():
-    model = joblib.load("models/xgb_model_v2.pkl")
+    model = joblib.load("models/xgb_model.pkl")
     return model
 
 
 def load_lgb_model():
-    model = joblib.load("models/lgb_model_v2.pkl")
+    model = joblib.load("models/lgb_model.pkl")
     return model
 
 
@@ -122,40 +129,82 @@ def predict_data(model, input):
     y_pred = model.predict(input)
     return y_pred.item()
 
-def get_patient_info(sample_patient_df):
-    # shapley values for sample patient
-    explainer = load_shap_explainer()
-    shap_values = explainer(sample_patient_df)
-    info = dict()
-    for i, col in enumerate(sample_patient_df.columns):
-        info[col] = {
+
+explainer = load_shap_explainer()
+model = load_xgb_model()
+
+
+def extract_shap_info():
+    patient_df = pd.DataFrame(shared_memory["patient_dict"], index=[0])
+    for col in data.select_dtypes(['category']).columns:
+        patient_df[col] = pd.Categorical(patient_df[col], categories=data[col].cat.categories)
+    shap_values = explainer(patient_df)
+    shap_info = {}
+    for i, col in enumerate(patient_df.columns):
+        shap_info[col] = {
             "type": data_info[col]["type"],
             "value": shap_values.data[0][i],
-            "shap value": shap_values.values[0][i].item(),
-            "other options": data_info[col]["options"] if "options" in data_info[col] else []
+            "shap value": shap_values.values[0][i],
+            "other options": data_info[col].get("options", [])
         }
-    return info
+    return json.dumps(shap_info)
 
-def ai_agent(patient_info):
-    # Send a test message
-    try:
-        response = llm(
-            [
-                HumanMessage(
-                    content=USER_PROMPT.replace(
-                        "###patient_info###", json.dumps(patient_info)
-                    )
-                ),
-                SystemMessage(content=SYSTEM_PROMPT),
-            ]
-        )
 
-        proposal = json.loads(response.content.strip("```json").strip("```").strip())
-    except:
-        proposal = ai_agent(patient_info)
-    
-    return proposal
+def suggest_strategies(shap_info: str):
+    shap_info = json.dumps(shap_info) if isinstance(shap_info, dict) else shap_info
+    response = llm.invoke(
+    [
+        HumanMessage(
+            content=USER_PROMPT.replace(
+                "###patient_info###", json.dumps(shap_info)
+            )
+        ),
+        SystemMessage(content=SYSTEM_PROMPT),
+    ]
+    )
+    strategies = response.content.strip()
+    return json.dumps(strategies)
 
+
+def cost_predition(strategies: dict):
+    strategies = json.loads(strategies) if isinstance(strategies, str) else strategies
+    shared_memory["suggested strategies"] = strategies
+    min_cost = shared_memory["current cost"]
+    for col, method in strategies.items():
+        if col == "Summary":
+            continue
+        info = data_info[col]
+        if method != None and len(method) > 5:
+            if info["type"] == "str" and "options" in info:
+                # print(col, info["options"])
+                for option in info["options"]:
+                    updated_patient_dict = shared_memory["patient_dict"].copy()
+                    # apply changes
+                    updated_patient_dict[col] = option
+                    updated_patient_df = pd.DataFrame(updated_patient_dict, index=[0])
+                    for col in data.select_dtypes(['category']).columns:
+                        updated_patient_df[col] = pd.Categorical(updated_patient_df[col], categories=data[col].cat.categories)
+                    cost = model.predict(updated_patient_df).item()
+                    if cost < min_cost:
+                        min_cost = cost
+                        shared_memory["new cost"] = min_cost
+                        shared_memory["target feature"] = col
+                        shared_memory["target strategy"] = option
+    # print(shared_memory)
+    return json.dumps(shared_memory)
+
+
+# --- Tool Collection and Agent Setup ---
+tools = [
+    StructuredTool.from_function(name="ExtractSHAPInfo", func=extract_shap_info, description="Compute SHAP values and return attributions"),
+    StructuredTool.from_function(name="SuggestStrategies", func=suggest_strategies, description="Suggest realistic cost-reducing strategies for given features"),
+    StructuredTool.from_function(name="CostPredition", func=cost_predition, description="Predict the cost after applying the strategies", return_direct=True),
+]
+
+
+planner = load_chat_planner(llm)
+executor = load_agent_executor(llm=llm, tools=tools, verbose=False)
+agent = PlanAndExecute(planner=planner, executor=executor, verbose=False, input_key="input")
 
 
 if __name__ == "__main__":
@@ -174,6 +223,7 @@ if __name__ == "__main__":
                 sample_patient_dict[col] = st.sidebar.selectbox(
                     f"{col}",
                     data_info[col]["options"],
+                    index=1,
                     help=data_info[col]["definition"],
                 )
 
@@ -182,6 +232,7 @@ if __name__ == "__main__":
                 if data_info[col]["type"] == "int64" or data_info[col]["type"] == "float64":
                     sample_patient_dict[col] = st.sidebar.number_input(
                         f"{col}",
+                        value=data[col][1],
                         help=data_info[col]["definition"],
                     )
 
@@ -191,15 +242,17 @@ if __name__ == "__main__":
                         value=(
                             data_info[col]["default"]
                             if "default" in data_info[col]
-                            else "Unknown"
+                            else data[col][1]
                         ),
                         placeholder=(
                             data_info[col]["default"]
                             if "default" in data_info[col]
-                            else "Unknown"
+                            else data[col][1]
                         ),
                         help=data_info[col]["definition"],
                     )
+
+    shared_memory["patient_dict"] = sample_patient_dict
 
     # --- Initialize state ---
     if "predict_clicked" not in st.session_state:
@@ -218,9 +271,6 @@ if __name__ == "__main__":
 
     if st.session_state.predict_clicked:
         # Section 2: Predict cost
-        # xgb_model = load_xgb_model()
-        model = load_lgb_model()
-
         sample_patient_df = pd.DataFrame(sample_patient_dict, index=[0])
 
         for col in data.select_dtypes(["category"]).columns:
@@ -230,6 +280,7 @@ if __name__ == "__main__":
 
         st.subheader("Predicted Inpatient Cost")
         cost = predict_data(model, sample_patient_df)
+        shared_memory["current cost"] = cost
         st.metric(label="Estimated Cost", value=f"${cost:,.2f}")
 
         # ask if user wants cost reduction
@@ -240,60 +291,57 @@ if __name__ == "__main__":
         # display suggestions from Agentic AI
         with st.spinner("Generating AI proposals..."):
             # Call your agentic AI module to generate proposals
-            patient_info = get_patient_info(sample_patient_df)
-            st.session_state.proposals = ai_agent(patient_info)
+            prompt = f"""
+                You are an expert in healthcare cost optimization and hospital operations strategy.
 
+                Execute these steps using the available tools:
+                
+                1. Run ExtractSHAPInfo with the result.
+                2. Run SuggestStrategies with the result.
+                3. Run CostPredition with suggested strategies.
+                Return the final recommended strategies.
+                """
+            
+            max_retries = 10
+            for attempt in range(max_retries):
+                try:
+                    output = agent.invoke({"input": prompt})
+                    print("Success!")
+                    print(output)
+                    print("-"*100)
+                    print(shared_memory["suggested strategies"])
+                    st.success("AI has generated the following proposals:")
+                    proposal_df = pd.DataFrame(columns=["Feature", "Proposal"])
+                    for k, v in shared_memory["suggested strategies"].items():
+                        proposal_df.loc[len(proposal_df)] = [k, v]
 
-    # show proposals if available
-    if st.session_state.proposals:
-        st.success("AI has generated the following proposals:")
+                    proposal_df.loc[len(proposal_df)] = ["Summary", output["output"]]
 
-        proposed_options = [
-            "-- Select an option --"
-        ] + [f"{col}: {p}" for col, p in st.session_state.proposals.items() if len(p) > 25 and col != "Summary"]
+                    gb = GridOptionsBuilder.from_dataframe(proposal_df)
+                    # Enable text wrapping and auto height for Description column
+                    gb.configure_column(
+                        "Proposal",
+                        wrapText=True,
+                        autoHeight=True,
+                        cellStyle={'white-space': 'normal'}
+                    )
+                    gb.configure_pagination()
+                    gb.configure_side_bar()
+                    grid_options = gb.build()
+                    AgGrid(proposal_df, gridOptions=grid_options, enable_enterprise_modules=True, height=300, fit_columns_on_grid_load=True)
 
-        selected = st.selectbox(
-            "Choose a proposal to apply:",
-            proposed_options,
-            key="proposal_selector"
-        )
-
-        # Run logic only if a real selection is made and it's new
-        if selected != "-- Select an option --" and selected != st.session_state.selected_proposal:
-            st.session_state.selected_proposal = selected
-
-            selected_col = selected.split(": ")[0]
-            selected_proposal = selected.split(": ")[1]
-            info = data_info[selected_col]
-            min_cost = cost
-            strategy = None
-            selected_option = None
-
-            # STR-type feature
-            if info["type"] == "str" and "options" in info:
-                for option in info["options"]:
-                    updated_patient_dict = sample_patient_dict.copy()
-                    updated_patient_dict[selected_col] = option
-                    updated_patient_df = pd.DataFrame(updated_patient_dict, index=[0])
-                    for cat_col in data.select_dtypes(['category']).columns:
-                        updated_patient_df[cat_col] = pd.Categorical(
-                            updated_patient_df[cat_col],
-                            categories=data[cat_col].cat.categories
+                    if "new cost" in shared_memory:
+                        st.metric(
+                            label="Estimated Cost After Intervention",
+                            value=f"${shared_memory['new cost']:,.2f}",
+                            delta=f"-${shared_memory['current cost'] - shared_memory['new cost']:,.2f} by setting {shared_memory['target feature']} to {shared_memory['target strategy']}"
                         )
-                    new_cost = predict_data(model, updated_patient_df)
-                    if new_cost < min_cost:
-                        min_cost = new_cost
-                        strategy = selected_col
-                        selected_option = option
+                    else:
+                        st.info("Unfortunately, I couldn't find any cost optimization method. Please update patient info manually based on the proposals.")
 
-
-                # show result metric
-                st.metric(
-                    label="Estimated Cost After Intervention",
-                    value=f"${min_cost:,.2f}",
-                    delta=f"-${cost - min_cost:,.2f} by setting {strategy} to {selected_option}"
-                )
-
+                    break
+                except Exception as e:
+                    print(f"Attempt {attempt + 1} failed: {e}")
+                    time.sleep(10)
             else:
-                st.info("Please update patient info manually to evaluate this proposal.")
-
+                print("All retries failed.")
