@@ -1,5 +1,3 @@
-# Begin Ge
-
 import json
 import pathlib
 import uuid
@@ -72,8 +70,6 @@ from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 import requests
 
-
-# End Co
 
 @st.cache_data
 def load_data(path):
@@ -539,4 +535,4 @@ if prompt := st.chat_input("What would you like to know?"):
         final_assistant_message = {"role": "assistant", "content": full_response, "image": image_to_display}
         st.session_state.messages.append(final_assistant_message)
         logger.info("Graph stream finished. Assistant response complete.")
-# End Ge
+
