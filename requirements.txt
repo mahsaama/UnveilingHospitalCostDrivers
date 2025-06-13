@@ -25,3 +25,4 @@ streamlit-aggrid
 langgraph
 rtdl_num_embeddings
 kaleido
+optuna
