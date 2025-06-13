@@ -52,6 +52,10 @@ Workflow
 -------
 ![workflow](Workflow.jpeg)
 
+Hardware
+-------
+We have trained our models on Colab NVIDIA Tesla T4 GPU with 16 GB RAM.
+
 
 Getting Started
 -----
