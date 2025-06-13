@@ -22,3 +22,6 @@ torch
 lime
 langchain_experimental
 streamlit-aggrid
+langgraph
+rtdl_num_embeddings
+kaleido
