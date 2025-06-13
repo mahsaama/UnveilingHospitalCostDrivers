@@ -22,3 +22,4 @@ torch
 lime
 langchain_experimental
 streamlit-aggrid
+optuna
