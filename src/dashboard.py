@@ -144,7 +144,7 @@ def extract_shap_info():
         shap_info[col] = {
             "type": data_info[col]["type"],
             "value": shap_values.data[0][i],
-            "shap value": shap_values.values[0][i],
+            "shap value": float(shap_values.values[0][i]),
             "other options": data_info[col].get("options", [])
         }
     return json.dumps(shap_info)
