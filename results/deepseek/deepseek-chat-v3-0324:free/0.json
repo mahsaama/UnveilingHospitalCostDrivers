@@ -1,0 +1,69 @@
+{
+    "patient_dict": {
+        "Hospital Service Area": "Western NY",
+        "Hospital County": "Erie",
+        "Operating Certificate Number": 1401014,
+        "Permanent Facility Id": 207,
+        "Facility Name": "Buffalo General Medical Center",
+        "Age Group": "70 or Older",
+        "Zip Code - 3 digits": 140,
+        "Gender": "F",
+        "Race": "White",
+        "Ethnicity": "Not Span/Hispanic",
+        "Length of Stay": 3,
+        "Type of Admission": "Emergency",
+        "Patient Disposition": "Home or Self Care",
+        "Discharge Year": 2022,
+        "CCSR Diagnosis Code": "INJ008",
+        "CCSR Diagnosis Description": "Traumatic brain injury (TBI); concussion, initial encounter",
+        "CCSR Procedure Code": "Unknown",
+        "CCSR Procedure Description": "Unknown",
+        "APR DRG Code": 55,
+        "APR DRG Description": "HEAD TRAUMA WITH COMA > 1 HOUR OR HEMORRHAGE",
+        "APR MDC Code": 1,
+        "APR MDC Description": "DISEASES AND DISORDERS OF THE NERVOUS SYSTEM",
+        "APR Severity of Illness Code": "1",
+        "APR Severity of Illness Description": "Minor",
+        "APR Risk of Mortality": "Moderate",
+        "APR Medical Surgical Description": "Medical",
+        "Payment Typology 1": "Medicare",
+        "Payment Typology 2": "Self-Pay",
+        "Payment Typology 3": "Unknown",
+        "Birth Weight": -1,
+        "Emergency Department Indicator": "Y",
+        "Total Charges": 11499.47
+    },
+    "attempt": -1,
+    "response time": 331.51959800720215,
+    "current cost": 4342.01806640625,
+    "suggested strategies": {
+        "Charge Management": [
+            "Implement standardized pricing models",
+            "Negotiate bundled service rates with suppliers",
+            "Conduct regular charge master audits"
+        ],
+        "Stay Duration Optimization": [
+            "Develop condition-specific clinical pathways",
+            "Enhance discharge planning processes",
+            "Implement early rehabilitation programs"
+        ],
+        "Facility Network Strategy": [
+            "Establish preferred provider networks",
+            "Implement tiered facility utilization protocols",
+            "Optimize patient transfer agreements"
+        ],
+        "Diagnosis-Cost Alignment": [
+            "Develop alternative treatment protocols for high-cost diagnoses",
+            "Shift appropriate care to outpatient settings",
+            "Enhance coding accuracy initiatives"
+        ],
+        "Preventive Severity Reduction": [
+            "Implement early warning systems for clinical deterioration",
+            "Focus on chronic disease management programs",
+            "Enhance preventive care initiatives"
+        ]
+    },
+    "new cost": 199.2379913330078,
+    "target feature": "Facility Name",
+    "target strategy": "Long Island Community Hospital"
+}
