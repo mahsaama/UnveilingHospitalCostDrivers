@@ -33,14 +33,8 @@
         "Emergency Department Indicator": "Y",
         "Total Charges": 24559.0
     },
-    "attempt": 3,
-    "llm_response": "Based on the analysis:\n\n**Current Predicted Cost:** $18,920\n\n**Top Recommendation:**\n- Switch **Facility Name** to **Long Island Jewish Medical Center** or **Kings County Hospital Center**\n- **Estimated New Cost:** $3,030 (saves ~84%)\n\nOther factors like **APR DRG Description** (Diabetes) and **Race** currently lack actionable optimization pathways. Prioritization: Facility change > All other drivers.",
-    "response time": 251.05633401870728,
-    "current cost": 18920.193359375,
-    "suggested strategies": {
-        "Facility Name": "Long Island Jewish Medical Center"
-    },
-    "new cost": 3030.374267578125,
-    "target feature": "Facility Name",
-    "target strategy": "Long Island Jewish Medical Center"
+    "attempt": 1,
+    "llm_response": "The final recommended strategies for healthcare cost optimization are:\n1. Transfer suitable patients to lower-cost hospitals or partner with community hospitals to address the high-cost impact of the Facility Name.\n2. Implement enhanced outpatient management and early intervention for diabetes complications to reduce costs related to the CCSR Diagnosis Code.\n3. Strengthen diabetes care coordination and patient education to manage costs associated with APR DRG Description.\n4. Focus on early detection and outpatient management to maintain low severity of illness and reduce related costs.\n5. Optimize discharge planning and care transitions to reduce the Length of Stay, thereby lowering costs.\n6. Enhance chronic disease management and improve primary care access to reduce emergency admissions.\n7. Develop value-based care agreements with private insurers to incentivize cost-effective care management.\n8. Collaborate with Medicare to enroll patients in preventive care and disease management programs.\nThese strategies collectively target the key cost drivers and have the highest potential for effective healthcare cost reduction.",
+    "response time": 31.688518285751343,
+    "current cost": 18920.193359375
 }
