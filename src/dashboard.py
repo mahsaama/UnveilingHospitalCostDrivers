@@ -121,7 +121,7 @@ def load_lgb_model():
 
 
 def load_shap_explainer():
-    explainer = joblib.load("models/shap_explainer.pkl")
+    explainer = joblib.load("models/shap_explainer_lgb_best.pkl")
     return explainer
 
 
@@ -131,7 +131,7 @@ def predict_data(model, input):
 
 
 explainer = load_shap_explainer()
-model = load_xgb_model()
+model = load_lgb_model()
 
 
 def extract_shap_info():
