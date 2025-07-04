@@ -1,0 +1,10 @@
+0,Blue Cross/Blue Shield
+1,Department of Corrections
+2,Federal/State/Local/VA
+3,Managed Care, Unspecified
+4,Medicaid
+5,Medicare
+6,Miscellaneous/Other
+7,Private Health Insurance
+8,Self-Pay
+9,Unknown
