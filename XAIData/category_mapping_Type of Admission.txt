@@ -1,0 +1,6 @@
+0,Elective
+1,Emergency
+2,Newborn
+3,Not Available
+4,Trauma
+5,Urgent
