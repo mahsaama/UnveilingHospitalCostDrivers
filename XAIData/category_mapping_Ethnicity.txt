@@ -1,0 +1,4 @@
+0,Multi-ethnic
+1,Not Span/Hispanic
+2,Spanish/Hispanic
+3,Unknown

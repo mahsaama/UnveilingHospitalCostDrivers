@@ -1,0 +1,19 @@
+0,Another Type Not Listed
+1,Cancer Center or Children's Hospital
+2,Court/Law Enforcement
+3,Critical Access Hospital
+4,Expired
+5,Facility w/ Custodial/Supportive Care
+6,Federal Health Care Facility
+7,Home or Self Care
+8,Home w/ Home Health Services
+9,Hosp Basd Medicare Approved Swing Bed
+10,Hospice - Home
+11,Hospice - Medical Facility
+12,Inpatient Rehabilitation Facility
+13,Left Against Medical Advice
+14,Medicaid Cert Nursing Facility
+15,Medicare Cert Long Term Care Hospital
+16,Psychiatric Hospital or Unit of Hosp
+17,Short-term Hospital
+18,Skilled Nursing Home

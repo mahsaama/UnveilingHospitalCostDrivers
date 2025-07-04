@@ -1,0 +1,9 @@
+0,Capital/Adirond
+1,Central NY
+2,Finger Lakes
+3,Hudson Valley
+4,Long Island
+5,New York City
+6,Southern Tier
+7,Unknown
+8,Western NY

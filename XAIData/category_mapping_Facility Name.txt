@@ -1,0 +1,206 @@
+0,A.O. Fox Memorial Hospital
+1,Adirondack Medical Center-Saranac Lake Site
+2,Albany Medical Center - South Clinical Campus
+3,Albany Medical Center Hospital
+4,Arnot Ogden Medical Center
+5,Auburn Community Hospital
+6,Bellevue Hospital Center
+7,Bertrand Chaffee Hospital
+8,Blythedale Children's Hospital
+9,Bon Secours Community Hospital
+10,BronxCare Hospital Center
+11,Brookdale Hospital Medical Center
+12,Brooklyn Hospital Center - Downtown Campus
+13,Brooks-TLC Hospital System, Inc.
+14,Buffalo General Medical Center
+15,Calvary Hospital
+16,Calvary Hospital Inc
+17,Canton-Potsdam Hospital
+18,Carthage Area Hospital Inc
+19,Cayuga Medical Center at Ithaca
+20,Chenango Memorial Hospital Inc
+21,Claxton-Hepburn Medical Center
+22,Clifton Springs Hospital and Clinic
+23,Clifton-Fine Hospital
+24,Cobleskill Regional Hospital
+25,Cohen Children's Medical Center
+26,Columbia Memorial Hospital
+27,Community Memorial Hospital Inc
+28,Coney Island Hospital
+29,Corning Hospital
+30,Crouse Hospital
+31,Crouse Hospital - Commonwealth Division
+32,Cuba Memorial Hospital Inc
+33,David H. Koch Center For Cancer Care
+34,Delaware Valley Hospital Inc
+35,Eastern Niagara Hospital - Lockport Division
+36,Ellenville Regional Hospital
+37,Ellis Hospital
+38,Ellis Hospital - Bellevue Woman's Care Center Division
+39,Elmhurst Hospital Center
+40,Erie County Medical Center
+41,F.F. Thompson Hospital
+42,Faxton-St Lukes Healthcare St Lukes Division
+43,Flushing Hospital Medical Center
+44,Garnet Health Medical Center
+45,Garnet Health Medical Center - Catskills
+46,Garnet Health Medical Center - Catskills - G. Hermann Site
+47,Geneva General Hospital
+48,Glen Cove Hospital
+49,Glens Falls Hospital
+50,Good Samaritan Hospital Medical Center
+51,Good Samaritan Hospital of Suffern
+52,Gouverneur Hospital
+53,Guthrie Cortland Medical Center
+54,Harlem Hospital Center
+55,HealthAlliance Hospital Broadway Campus
+56,HealthAlliance Hospital Mary's Avenue Campus
+57,Helen Hayes Hospital
+58,Henry J. Carter Specialty Hospital
+59,Highland Hospital
+60,Hospital for Special Surgery
+61,Huntington Hospital
+62,Interfaith Medical Center
+63,Ira Davenport Memorial Hospital
+64,Jacobi Medical Center
+65,Jamaica Hospital Medical Center
+66,John R. Oishei Children's Hospital
+67,John T Mather Memorial Hospital of Port Jefferson New York Inc
+68,Kenmore Mercy Hospital
+69,Kings County Hospital Center
+70,Kingsbrook Jewish Medical Center
+71,Lakeview Center for Mental Health and Wellness
+72,Lenox Hill Hospital
+73,Lewis County General Hospital
+74,Lincoln Medical & Mental Health Center
+75,Little Falls Hospital
+76,Long Island Community Hospital
+77,Long Island Jewish Forest Hills
+78,Long Island Jewish Medical Center
+79,Long Island Jewish Valley Stream
+80,Maimonides Medical Center
+81,Margaretville Hospital
+82,Mary Imogene Bassett Hospital
+83,Massena Hospital
+84,Medina Memorial Hospital
+85,Memorial Hosp of Wm F & Gertrude F Jones A/K/A Jones Memorial Hosp
+86,Memorial Hospital for Cancer and Allied Diseases
+87,Mercy Hospital
+88,Mercy Hospital of Buffalo
+89,Metropolitan Hospital Center
+90,Mid-Hudson Valley Division of Westchester Medical Center
+91,Millard Fillmore Suburban Hospital
+92,Montefiore Med Center - Jack D Weiler Hosp of A Einstein College Div
+93,Montefiore Medical Center - Henry & Lucy Moses Div
+94,Montefiore Medical Center-Wakefield Hospital
+95,Montefiore Mount Vernon Hospital
+96,Montefiore New Rochelle Hospital
+97,Montefiore Nyack
+98,Mount Sinai Beth Israel
+99,Mount Sinai Brooklyn
+100,Mount Sinai Hospital
+101,Mount Sinai Hospital - Mount Sinai Hospital of Queens
+102,Mount Sinai Morningside
+103,Mount Sinai South Nassau
+104,Mount Sinai West
+105,Mount St. Mary's Hospital and Health Center
+106,NYU Langone Hospital-Brooklyn
+107,NYU Langone Hospital-Long Island
+108,NYU Langone Hospitals
+109,NYU Langone Orthopedic Hospital
+110,Nassau University Medical Center
+111,Nathan Littauer Hospital
+112,New York - Presbyterian Brooklyn Methodist Hospital
+113,New York - Presbyterian Hospital
+114,New York - Presbyterian/Queens
+115,New York Community Hospital of Brooklyn, Inc
+116,New York Eye and Ear Infirmary of Mount Sinai
+117,New York Presbyterian Hospital - Allen Hospital
+118,New York-Presbyterian David H. Koch Center
+119,New York-Presbyterian Hospital - Columbia Presbyterian Center
+120,New York-Presbyterian Hospital - New York Weill Cornell Center
+121,New York-Presbyterian Westchester Behavioral Health Center
+122,New York-Presbyterian/Lower Manhattan Hospital
+123,NewYork-Presbyterian/Hudson Valley Hospital
+124,Newark-Wayne Community Hospital
+125,Niagara Falls Memorial Medical Center
+126,Nicholas H. Noyes Memorial Hospital
+127,North Central Bronx Hospital
+128,North Shore University Hospital
+129,Northern Dutchess Hospital
+130,Northern Westchester Hospital
+131,O'Connor Hospital
+132,Olean General Hospital
+133,Oneida Health Hospital
+134,Oswego Hospital
+135,Our Lady of Lourdes Memorial Hospital
+136,Peconic Bay Medical Center
+137,Phelps Hospital
+138,Plainview Hospital
+139,Putnam Hospital
+140,Queens Hospital Center
+141,Redacted for Confidentiality
+142,Richmond University Medical Center
+143,River Hospital, Inc.
+144,Rochester General Hospital
+145,Rome Memorial Hospital, Inc
+146,Roswell Park Cancer Institute
+147,SBH Health System
+148,SJRH - Dobbs Ferry Pavillion
+149,SJRH - Park Care Pavilion
+150,SJRH - St Johns Division
+151,Samaritan Hospital
+152,Samaritan Hospital - St. Mary's Campus
+153,Samaritan Medical Center
+154,Saratoga Hospital
+155,Schuyler Hospital
+156,Sisters of Charity Hospital
+157,Sisters of Charity Hospital - St. Joseph Campus
+158,Soldiers and Sailors Memorial Hospital of Yates County
+159,South Shore University Hospital
+160,St Anthony Community Hospital
+161,St Catherine of Siena Hospital
+162,St Elizabeth Medical Center
+163,St Johns Episcopal Hospital So Shore
+164,St Luke's Cornwall Hospital/Newburgh
+165,St. Charles Hospital
+166,St. Francis Hospital & Heart Center
+167,St. James Hospital
+168,St. Joseph Hospital
+169,St. Joseph's Hospital
+170,St. Joseph's Hospital Health Center
+171,St. Joseph's MC-St. Vincent's Westchester Division
+172,St. Joseph's Medical Center
+173,St. Mary's Healthcare
+174,St. Mary's Healthcare - Amsterdam Memorial Campus
+175,St. Peter's Addiction Recovery Center
+176,St. Peter's Hospital
+177,Staten Island University Hosp-North
+178,Staten Island University Hospital Prince's Bay
+179,Stony Brook Eastern Long Island Hospital
+180,Stony Brook Southampton Hospital
+181,Stony Brook University Hospital
+182,Strong Memorial Hospital
+183,Sunnyview Hospital and Rehabilitation Center
+184,Syosset Hospital
+185,The Unity Hospital of Rochester
+186,The University of Vermont Health Network - Alice Hyde Medical Center
+187,The University of Vermont Health Network - Champlain Valley Physicians Hospital
+188,The University of Vermont Health Network - Elizabethtown Community Hospital
+189,UPMC Chautauqua at WCA
+190,UPSTATE University Hospital at Community General
+191,United Health Services Hospitals Inc. - Binghamton General Hospital
+192,United Health Services Hospitals Inc. - Wilson Medical Center
+193,United Memorial Medical Center Bank Street Campus
+194,United Memorial Medical Center North Street Campus
+195,Unity Specialty Hospital
+196,University Hospital SUNY Health Science Center
+197,University Hospital of Brooklyn
+198,Vassar Brothers Medical Center
+199,Westchester Medical Center
+200,Westfield Memorial Hospital Inc
+201,White Plains Hospital Center
+202,Winifred Masterson Burke Rehabilitation Hospital
+203,Woodhull Medical & Mental Health Center
+204,Wyckoff Heights Medical Center
+205,Wyoming County Community Hospital

@@ -1,0 +1,5 @@
+0,Extreme
+1,Major
+2,Minor
+3,Moderate
+4,Unknown

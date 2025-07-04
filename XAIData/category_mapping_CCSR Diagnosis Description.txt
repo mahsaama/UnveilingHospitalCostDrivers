@@ -1,0 +1,480 @@
+0,Abdominal hernia
+1,Abdominal pain and other digestive/abdomen signs and symptoms
+2,Abnormal findings without diagnosis
+3,Acquired absence of limb or organ
+4,Acquired deformities (excluding foot)
+5,Acquired foot deformities
+6,Acute and chronic tonsillitis
+7,Acute and unspecified renal failure
+8,Acute bronchitis
+9,Acute hemorrhagic cerebrovascular disease
+10,Acute myocardial infarction
+11,Acute phlebitis; thrombophlebitis and thromboembolism
+12,Acute posthemorrhagic anemia
+13,Acute pulmonary embolism
+14,Acute rheumatic heart disease
+15,Adverse effects of drugs and medicaments, initial encounter
+16,Alcohol-related disorders
+17,Allergic reactions
+18,Allergic reactions, subsequent encounter
+19,Amputation of a limb, initial encounter
+20,Amputation of a limb, subsequent encounter
+21,Amputation of other body parts, initial encounter
+22,Anal and rectal conditions
+23,Anesthesia complications during pregnancy
+24,Antenatal screening
+25,Anxiety and fear-related disorders
+26,Aortic and peripheral arterial embolism or thrombosis
+27,Aortic; peripheral; and visceral artery aneurysms
+28,Aplastic anemia
+29,Appendicitis and other appendiceal conditions
+30,Arterial dissections
+31,Aseptic necrosis and osteonecrosis
+32,Aspiration pneumonitis
+33,Asthma
+34,Atypical fracture, initial encounter
+35,Atypical fracture, subsequent encounter
+36,Autoinflammatory syndromes
+37,Bacterial infections
+38,Benign neoplasms
+39,Benign ovarian cyst
+40,Biliary tract disease
+41,Biomechanical lesions
+42,Bipolar and related disorders
+43,Birth trauma
+44,Blindness and vision defects
+45,Bone cancer
+46,Breast cancer - all other types
+47,Breast cancer - ductal carcinoma in situ (DCIS)
+48,Burn and corrosion, initial encounter
+49,Burns and corrosion, subsequent encounter
+50,CNS abscess
+51,COVID-19
+52,Calculus of urinary tract
+53,Cancer of other sites
+54,Cannabis-related disorders
+55,Cardiac and circulatory congenital anomalies
+56,Cardiac arrest and ventricular fibrillation
+57,Cardiac cancers
+58,Cardiac dysrhythmias
+59,Cataract and other lens disorders
+60,Cerebral infarction
+61,Cerebral palsy
+62,Chromosomal abnormalities
+63,Chronic kidney disease
+64,Chronic obstructive pulmonary disease and bronchiectasis
+65,Chronic phlebitis; thrombophlebitis and thromboembolism
+66,Chronic rheumatic heart disease
+67,Circulatory signs and symptoms
+68,Cleft lip or palate
+69,Coagulation and hemorrhagic disorders
+70,Coma; stupor; and brain damage
+71,Complication of cardiovascular device, implant or graft, initial encounter
+72,Complication of cardiovascular device, implant or graft, subsequent encounter
+73,Complication of genitourinary device, implant or graft, initial encounter
+74,Complication of genitourinary device, implant or graft, subsequent encounter
+75,Complication of internal orthopedic device or implant, initial encounter
+76,Complication of internal orthopedic device or implant, subsequent encounter
+77,Complication of other surgical or medical care, injury, initial encounter
+78,Complication of other surgical or medical care, injury, subsequent encounter
+79,Complication of transplanted organs or tissue, initial encounter
+80,Complication, sequela
+81,Complications following ectopic and/or molar pregnancy
+82,Complications of acute myocardial infarction
+83,Complications specified during childbirth
+84,Complications specified during the puerperium
+85,Conditions due to neoplasm or the treatment of neoplasm
+86,Conduction disorders
+87,Congenital malformations of eye, ear, face, neck
+88,Contact dermatitis
+89,Contraceptive and procreative management
+90,Cornea and external disease
+91,Coronary atherosclerosis and other heart disease
+92,Crushing injury, initial encounter
+93,Crushing injury, subsequent encounter
+94,Crystal arthropathies (excluding gout)
+95,Cystic fibrosis
+96,Depressive disorders
+97,Diabetes mellitus with complication
+98,Diabetes mellitus without complication
+99,Diabetes or abnormal glucose tolerance complicating pregnancy; childbirth; or the puerperium
+100,Digestive congenital anomalies
+101,Diseases of inner ear and related conditions
+102,Diseases of middle ear and mastoid (except otitis media)
+103,Diseases of mouth; excluding dental
+104,Diseases of white blood cells
+105,Dislocations, initial encounter
+106,Dislocations, subsequent encounter
+107,Disorders of jaw
+108,Disorders of lipid metabolism
+109,Disorders of teeth and gingiva
+110,Disruptive, impulse-control and conduct disorders
+111,Diverticulosis and diverticulitis
+112,Drug induced or toxic related condition
+113,Dysphagia
+114,Early or threatened labor
+115,Early, first or unspecified trimester hemorrhage
+116,Ectopic pregnancy and complications of ectopic pregnancy
+117,Effect of foreign body entering opening, initial encounter
+118,Effect of foreign body entering opening, subsequent encounter
+119,Effect of other external causes, initial encounter
+120,Effect of other external causes, sequela
+121,Effect of other external causes, subsequent encounter
+122,Encephalitis
+123,Encounter for antineoplastic therapies
+124,Encounter for mental health conditions
+125,Encounter for mental health services related to abuse
+126,Encounter for observation and examination for conditions ruled out (excludes infectious disease, neoplasm, mental disorders)
+127,Encounter for prophylactic or other procedures
+128,Endocarditis and endocardial disease
+129,Endocrine system cancers - adrenocortical
+130,Endocrine system cancers - all other types
+131,Endocrine system cancers - pancreas
+132,Endocrine system cancers - parathyroid
+133,Endocrine system cancers - pituitary gland
+134,Endocrine system cancers - thymus
+135,Endocrine system cancers - thyroid
+136,Endometriosis
+137,Epilepsy; convulsions
+138,Erectile dysfunction
+139,Esophageal disorders
+140,Essential hypertension
+141,Exposure, encounters, screening or contact with infectious disease
+142,Feeding and eating disorders
+143,Female infertility
+144,Female reproductive system cancers - all other types
+145,Female reproductive system cancers - cervix
+146,Female reproductive system cancers - endometrium
+147,Female reproductive system cancers - fallopian tube
+148,Female reproductive system cancers - ovary
+149,Female reproductive system cancers - uterus
+150,Female reproductive system cancers - vagina
+151,Female reproductive system cancers - vulva
+152,Fever
+153,Fluid and electrolyte disorders
+154,Foodborne intoxications
+155,Fracture of head and neck, initial encounter
+156,Fracture of head and neck, subsequent encounter
+157,Fracture of lower limb (except hip), subsequent encounter
+158,Fracture of the lower limb (except hip), initial encounter
+159,Fracture of the neck of the femur (hip), initial encounter
+160,Fracture of the neck of the femur (hip), subsequent encounter
+161,Fracture of the spine and back, initial encounter
+162,Fracture of the spine and back, subsequent encounter
+163,Fracture of the upper limb, initial encounter
+164,Fracture of the upper limb, subsequent encounter
+165,Fracture of torso, initial encounter
+166,Fracture of torso, subsequent encounter
+167,Fungal infections
+168,Gangrene
+169,Gastritis and duodenitis
+170,Gastroduodenal ulcer
+171,Gastrointestinal and biliary perforation
+172,Gastrointestinal cancers - all other types
+173,Gastrointestinal cancers - anus
+174,Gastrointestinal cancers - bile duct
+175,Gastrointestinal cancers - colorectal
+176,Gastrointestinal cancers - esophagus
+177,Gastrointestinal cancers - gallbladder
+178,Gastrointestinal cancers - liver
+179,Gastrointestinal cancers - peritoneum
+180,Gastrointestinal cancers - small intestine
+181,Gastrointestinal cancers - stomach
+182,Gastrointestinal hemorrhage
+183,General sensation/perception signs and symptoms
+184,Genitourinary congenital anomalies
+185,Genitourinary signs and symptoms
+186,Glaucoma
+187,Gout
+188,HIV infection
+189,Hallucinogen-related disorders
+190,Head and neck cancers - all other types
+191,Head and neck cancers - eye
+192,Head and neck cancers - hypopharyngeal
+193,Head and neck cancers - laryngeal
+194,Head and neck cancers - lip and oral cavity
+195,Head and neck cancers - nasopharyngeal
+196,Head and neck cancers - pharyngeal
+197,Head and neck cancers - salivary gland
+198,Head and neck cancers - throat
+199,Head and neck cancers - tonsils
+200,Headache; including migraine
+201,Hearing loss
+202,Heart failure
+203,Hematuria
+204,Hemolytic anemia
+205,Hemolytic jaundice and perinatal jaundice
+206,Hemorrhage after first trimester
+207,Hemorrhagic and hematologic disorders of newborn
+208,Hemorrhoids
+209,Hepatic failure
+210,Hepatitis
+211,Hodgkin lymphoma
+212,Hyperplasia of prostate
+213,Hypertension and hypertensive-related conditions complicating pregnancy; childbirth; and the puerperium
+214,Hypertension with complications and secondary hypertension
+215,Hypotension
+216,Immune-mediated/reactive arthropathies
+217,Immunity disorders
+218,Implant, device or graft related encounter
+219,Induced abortion and complications of termination of pregnancy
+220,Infective arthritis
+221,Inflammatory conditions of male genital organs
+222,Inflammatory diseases of female pelvic organs
+223,Influenza
+224,Inhalant-related disorders
+225,Injury to blood vessels, initial encounter
+226,Injury to blood vessels, subsequent encounter
+227,Injury to nerves, muscles and tendons, initial encounter
+228,Injury to nerves, muscles and tendons, subsequent encounter
+229,Injury, sequela
+230,Internal organ injury, initial encounter
+231,Internal organ injury, subsequent encounter
+232,Intestinal infection
+233,Intestinal obstruction and ileus
+234,Juvenile arthritis
+235,Leukemia - acute lymphoblastic leukemia (ALL)
+236,Leukemia - acute myeloid leukemia (AML)
+237,Leukemia - all other types
+238,Leukemia - chronic lymphocytic leukemia (CLL)
+239,Leukemia - chronic myeloid leukemia (CML)
+240,Leukemia - hairy cell
+241,Lifestyle/life management factors
+242,Liveborn
+243,Low back pain
+244,Lung disease due to external agents
+245,Malaise and fatigue
+246,Male infertility
+247,Male reproductive system cancers - all other types
+248,Male reproductive system cancers - penis
+249,Male reproductive system cancers - prostate
+250,Male reproductive system cancers - testis
+251,Malignant neoplasm, unspecified
+252,Malignant neuroendocrine tumors
+253,Malnutrition
+254,Malposition, disproportion or other labor complications
+255,Maltreatment/abuse
+256,Maltreatment/abuse, subsequent encounter
+257,Maternal care for abnormality of pelvic organs
+258,Maternal care related to disorders of the placenta and placental implantation
+259,Maternal care related to fetal conditions
+260,Maternal intrauterine infection
+261,Mediastinal disorders
+262,Medical examination/evaluation
+263,Meningitis
+264,Menopausal disorders
+265,Menstrual disorders
+266,Mental and substance use disorders in remission
+267,Mesothelioma
+268,Miscellaneous mental and behavioral disorders/conditions
+269,Molar pregnancy and other abnormal products of conception
+270,Multiple gestation
+271,Multiple myeloma
+272,Multiple sclerosis
+273,Muscle disorders
+274,Musculoskeletal abscess
+275,Musculoskeletal congenital conditions
+276,Musculoskeletal pain, not low back pain
+277,Myelodysplastic syndrome (MDS)
+278,Myocarditis and cardiomyopathy
+279,Myopathies
+280,Nausea and vomiting
+281,Neonatal abstinence syndrome
+282,Neonatal acidemia and hypoxia
+283,Neonatal cerebral disorders
+284,Neonatal digestive and feeding disorders
+285,Neoplasm-related encounters
+286,Neoplasms of unspecified nature or uncertain behavior
+287,Nephritis; nephrosis; renal sclerosis
+288,Nerve and nerve root disorders
+289,Nervous system cancers - all other types
+290,Nervous system cancers - brain
+291,Nervous system congenital anomalies
+292,Nervous system pain and pain syndromes
+293,Nervous system signs and symptoms
+294,Neuro-ophthalmology
+295,Neurocognitive disorders
+296,Neurodevelopmental disorders
+297,Neurogenic/neuropathic arthropathy
+298,Newborn affected by maternal conditions or complications of labor/delivery
+299,Non-Hodgkin lymphoma
+300,Non-pressure ulcer of skin
+301,Noninfectious gastroenteritis
+302,Noninfectious hepatitis
+303,Nonmalignant breast conditions
+304,Nonrheumatic and unspecified valve disorders
+305,Nonspecific chest pain
+306,Nutritional anemia
+307,Nutritional deficiencies
+308,OB-related trauma to perineum and vulva
+309,Obesity
+310,Obsessive-compulsive and related disorders
+311,Obstetric history affecting care in pregnancy
+312,Occlusion or stenosis of precerebral or cerebral arteries without infarction
+313,Oculofacial plastics and orbital conditions
+314,Open wounds of head and neck, initial encounter
+315,Open wounds of head and neck, subsequent encounter
+316,Open wounds of trunk, initial encounter
+317,Open wounds of trunk, subsequent encounter
+318,Open wounds to limbs, initial encounter
+319,Open wounds to limbs, subsequent encounter
+320,Opioid-related disorders
+321,Osteoarthritis
+322,Osteomalacia
+323,Osteomyelitis
+324,Osteoporosis
+325,Other aftercare encounter
+326,Other and ill-defined cerebrovascular disease
+327,Other and ill-defined heart disease
+328,Other general signs and symptoms
+329,Other nervous system disorders (neither hereditary nor degenerative)
+330,Other nervous system disorders (often hereditary or degenerative)
+331,Other specified CNS infection and poliomyelitis
+332,Other specified and unspecified circulatory disease
+333,Other specified and unspecified congenital anomalies
+334,Other specified and unspecified diseases of bladder and urethra
+335,Other specified and unspecified diseases of kidney and ureters
+336,Other specified and unspecified disorders of stomach and duodenum
+337,Other specified and unspecified disorders of the ear
+338,Other specified and unspecified endocrine disorders
+339,Other specified and unspecified gastrointestinal disorders
+340,Other specified and unspecified hematologic conditions
+341,Other specified and unspecified liver disease
+342,Other specified and unspecified lower respiratory disease
+343,Other specified and unspecified mood disorders
+344,Other specified and unspecified nutritional and metabolic disorders
+345,Other specified and unspecified perinatal conditions
+346,Other specified and unspecified skin disorders
+347,Other specified and unspecified upper respiratory disease
+348,Other specified bone disease and musculoskeletal deformities
+349,Other specified chronic arthropathy
+350,Other specified complications in pregnancy
+351,Other specified connective tissue disease
+352,Other specified diseases of veins and lymphatics
+353,Other specified encounters and counseling
+354,Other specified eye disorders
+355,Other specified female genital disorders
+356,Other specified inflammatory condition of skin
+357,Other specified injury
+358,Other specified injury, subsequent encounter
+359,Other specified joint disorders
+360,Other specified male genital disorders
+361,Other specified status
+362,Other specified substance-related disorders
+363,Other specified upper respiratory infections
+364,Other unspecified injuries, subsequent encounter
+365,Other unspecified injury
+366,Otitis media
+367,Pancreatic disorders (excluding diabetes)
+368,Paralysis (other than cerebral palsy)
+369,Parasitic, other specified and unspecified infections
+370,Parkinson`s disease
+371,Pathological fracture, initial encounter
+372,Pathological fracture, subsequent encounter
+373,Pathological, stress and atypical fractures, sequela
+374,Pericarditis and pericardial disease
+375,Perinatal infections
+376,Peripheral and visceral vascular disease
+377,Peritonitis and intra-abdominal abscess
+378,Personality disorders
+379,Pituitary disorders
+380,Pleurisy, pleural effusion and pulmonary collapse
+381,Pneumonia (except that caused by tuberculosis)
+382,Pneumothorax
+383,Poisoning by drugs, initial encounter
+384,Poisoning by drugs, subsequent encounter
+385,Poisoning/toxic effect/adverse effects/underdosing, sequela
+386,Polyhydramnios and other problems of amniotic cavity
+387,Polyneuropathies
+388,Postprocedural or postoperative circulatory system complication
+389,Postprocedural or postoperative complications of the spleen
+390,Postprocedural or postoperative digestive system complication
+391,Postprocedural or postoperative ear and/or mastoid process complication
+392,Postprocedural or postoperative endocrine or metabolic complication
+393,Postprocedural or postoperative eye complication
+394,Postprocedural or postoperative genitourinary system complication
+395,Postprocedural or postoperative musculoskeletal system complication
+396,Postprocedural or postoperative nervous system complication
+397,Postprocedural or postoperative respiratory system complication
+398,Postprocedural or postoperative skin complication
+399,Postthrombotic syndrome and venous insufficiency/hypertension
+400,Pressure ulcer of skin
+401,Previous C-section
+402,Prolapse of female genital organs
+403,Prolonged pregnancy
+404,Proteinuria
+405,Pulmonary heart disease
+406,Refractive error
+407,Regional enteritis and ulcerative colitis
+408,Respiratory cancers
+409,Respiratory congenital malformations
+410,Respiratory distress syndrome
+411,Respiratory failure; insufficiency; arrest
+412,Respiratory perinatal condition
+413,Respiratory signs and symptoms
+414,Retinal and vitreous conditions
+415,Rheumatoid arthritis and related disease
+416,Sarcoma
+417,Schizophrenia spectrum and other psychotic disorders
+418,Scoliosis and other postural dorsopathic deformities
+419,Secondary malignancies
+420,Sedative-related disorders
+421,Septicemia
+422,Sequela of cerebral infarction and other cerebrovascular disease
+423,Sequela of hemorrhagic cerebrovascular disease
+424,Sequela of specified infectious disease conditions
+425,Sequela of specified nervous system conditions
+426,Sexually transmitted infections (excluding HIV and hepatitis)
+427,Shock
+428,Short gestation; low birth weight; and fetal growth retardation
+429,Sickle cell trait/anemia
+430,Sinusitis
+431,Skin and subcutaneous tissue infections
+432,Skin cancers - all other types
+433,Skin cancers - basal cell carcinoma
+434,Skin cancers - melanoma
+435,Skin cancers - squamous cell carcinoma
+436,Skin/Subcutaneous signs and symptoms
+437,Sleep wake disorders
+438,Somatic disorders
+439,Spinal cord injury (SCI), initial encounter
+440,Spinal cord injury (SCI), subsequent encounter
+441,Spondylopathies/spondyloarthropathy (including infective)
+442,Spontaneous abortion and complications of spontaneous abortion
+443,Sprains and strains, initial encounter
+444,Sprains and strains, subsequent encounter
+445,Stimulant-related disorders
+446,Strabismus
+447,Stress fracture, initial encounter
+448,Stress fracture, subsequent encounter
+449,Suicidal ideation/attempt/intentional self-harm
+450,Suicide attempt/intentional self-harm; subsequent encounter
+451,Superficial injury; contusion, initial encounter
+452,Superficial injury; contusion, subsequent encounter
+453,Symptoms of mental and substance use conditions
+454,Syncope
+455,Systemic lupus erythematosus and connective tissue disorders
+456,Tendon and synovial disorders
+457,Thyroid disorders
+458,Tobacco-related disorders
+459,Toxic effects, initial encounter
+460,Toxic effects, subsequent encounter
+461,Transient cerebral ischemia
+462,Trauma- and stressor-related disorders
+463,Traumatic arthropathy
+464,Traumatic brain injury (TBI); concussion, initial encounter
+465,Traumatic brain injury (TBI); concussion, subsequent encounter
+466,Tuberculosis
+467,Unacceptable PDX
+468,Uncomplicated pregnancy, delivery or puerperium
+469,Urinary incontinence
+470,Urinary system cancers - all other types
+471,Urinary system cancers - bladder
+472,Urinary system cancers - kidney
+473,Urinary system cancers - ureter and renal pelvis
+474,Urinary system cancers - urethra
+475,Urinary tract infections
+476,Uveitis and ocular inflammation
+477,Varicose veins of lower extremity
+478,Vesicoureteral reflux
+479,Viral infection
